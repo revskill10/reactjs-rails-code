@@ -44,9 +44,10 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'react-rails'
-group :test do 
-	gem 'capybara'
-	gem 'rspec-rails'
-	gem 'poltergeist'
-end
+	gem 'react-rails'
+	group :test do 
+		gem 'capybara'
+		gem 'rspec-rails'
+		gem 'poltergeist'
+		gem 'database_cleaner'
+	end

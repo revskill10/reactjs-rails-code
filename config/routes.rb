@@ -1,5 +1,8 @@
 Testreact::Application.routes.draw do
   
+  get 'sign_in' => "sessions/new", :as => :sign_in
+  post 'sign_in' => "sessions/create"
+  get 'sign_out' => "sessions/destroy", :as => :sign_out
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -15,7 +18,9 @@ Testreact::Application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   root 'home#index'
-  resource :blogs
+  resources :blogs do
+    resources :entries
+  end
   # Example resource route with options:
   #   resources :products do
   #     member do
