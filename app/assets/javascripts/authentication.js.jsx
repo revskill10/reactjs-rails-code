@@ -23,3 +23,16 @@
  		}
  	}
  });
+
+var SignInView = React.createClass({
+	render: function(){
+		return (
+			<div>
+				<form>
+					<input type="text" id="email" /><br/>
+					<input type="password" id="password"/>
+				</form>
+			</div>
+		);
+	}
+}) 

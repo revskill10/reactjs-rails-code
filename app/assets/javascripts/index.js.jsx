@@ -116,7 +116,8 @@ var Router = Backbone.Router.extend({
   routes : {
     "" : "index",
     "blogs/new" : "new_blog",
-    "blogs/:blog_id": "view_blog"
+    "blogs/:blog_id": "view_blog",
+    "sign_in": "sign_in"
   },
   index : function() {
   	var self = this;
@@ -135,6 +136,12 @@ var Router = Backbone.Router.extend({
     React.renderComponent(
       <BlogView blog_id={blog_id}/>,
       document.getElementById('new-blog')
+    )
+  },
+  sign_in: function(){
+    React.renderComponent(
+      <SignInView />,
+      document.getElementById('authentication')
     )
   }
 });
