@@ -4,7 +4,7 @@
 
  var Authentication = React.createClass({
  	getInitialState: function(){
-
+ 		return {};
  	},
  	componentWillMount: function(){
 

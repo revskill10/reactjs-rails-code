@@ -1,7 +1,7 @@
 /**
  * @jsx React.DOM
  */
-  
+//= require authentication  
 var token = $( 'meta[name="csrf-token"]' ).attr( 'content' );
  
 $.ajaxSetup( {
@@ -33,6 +33,7 @@ var HomeView = React.createClass({
   	});
     return (
     	<div>
+      <Authentication />
     	<p>{this.props.message}</p>
     	<a href="#/blogs/new">New Blog</a>
     	<br />
